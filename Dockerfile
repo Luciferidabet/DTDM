@@ -36,7 +36,7 @@ RUN apt-get update -y && apt-get install -y \
     default-jre \
     nginx
 
-RUN apt install -y openjdk-8-jre
+RUN apt-get install -y openjdk-11-jre
 RUN apt-get install -y default-jdk
 
 #Install applications
