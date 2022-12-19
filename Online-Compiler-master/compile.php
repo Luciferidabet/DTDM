@@ -93,20 +93,9 @@
 					include("compilers/cpp.php");
 					break;
 				}
-
-				case "cpp11":
-				{
-					include("compilers/cpp11.php");
-					break;
-				}
 				case "java":
 				{	
 					include("compilers/java.php");
-					break;
-				}
-				case "python2.7":
-				{
-					include("compilers/python27.php");
 					break;
 				}
 				case "python3.2":
