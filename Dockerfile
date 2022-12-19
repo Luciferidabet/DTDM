@@ -17,10 +17,10 @@ RUN apt-get update && \
 #Install C/C++ Compiler
 RUN add-apt-repository -y ppa:ubuntu-toolchain-r/test
 RUN apt-get update -y
-RUN apt-get install -y gcc
-RUN apt-get install -y g++
-RUN ln -f -s /usr/bin/gcc /usr/bin/gcc
-RUN ln -f -s /usr/bin/g++ /usr/bin/g++
+RUN apt-get install -y gcc-4.8
+RUN apt-get install -y g++-4.8
+RUN ln -f -s /usr/bin/gcc-4.8 /usr/bin/gcc
+RUN ln -f -s /usr/bin/g++-4.8 /usr/bin/g++
 
 #Install Java Compiler
 RUN add-apt-repository -y ppa:openjdk-r/ppa  
