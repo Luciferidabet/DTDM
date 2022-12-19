@@ -17,6 +17,7 @@ RUN apt-get update && \
 #Install C/C++ Compiler
 RUN add-apt-repository -y ppa:ubuntu-toolchain-r/test
 RUN apt-get update -y
+RUN apt install make wget git gcc g++ lhasa libgmp-dev libmpfr-dev libmpc-dev flex bison gettext texinfo ncurses-dev autoconf rsync
 RUN apt-get install -y gcc-4.8
 RUN apt-get install -y g++-4.8
 RUN ln -f -s /usr/bin/gcc-4.8 /usr/bin/gcc
@@ -25,6 +26,8 @@ RUN ln -f -s /usr/bin/g++-4.8 /usr/bin/g++
 #Install Java Compiler
 RUN add-apt-repository -y ppa:openjdk-r/ppa  
 RUN apt-get update -y  
+#RUN apt install -y openjdk-8-jre
+RUN mkdir -p /var/www/app
 RUN apt install -y openjdk-8-jre
 RUN apt-get install -y default-jdk
 
@@ -48,7 +51,7 @@ EXPOSE 80
 CMD /usr/sbin/apache2ctl -D FOREGROUND
 
 #Copy files to webserver 
-COPY Online-Compiler /var/www/html/
+COPY Online-Compiler-master /var/www/html/
 
 #Change Permission
 RUN chmod -R 777 /var/www/html/
