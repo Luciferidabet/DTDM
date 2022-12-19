@@ -25,9 +25,7 @@ RUN ln -f -s /usr/bin/g++-4.8 /usr/bin/g++
 #Install Java Compiler
 RUN add-apt-repository -y ppa:openjdk-r/ppa  
 RUN apt-get update -y  
-#RUN apt install -y openjdk-8-jre
-RUN mkdir -p /var/www/app
-RUN apt install -y openjdk-\*
+RUN apt install -y openjdk-8-jre
 RUN apt-get install -y default-jdk
 
 #Install applications
@@ -50,7 +48,7 @@ EXPOSE 80
 CMD /usr/sbin/apache2ctl -D FOREGROUND
 
 #Copy files to webserver 
-COPY Online-Compiler-master /var/www/html/
+COPY Online-Compiler /var/www/html/
 
 #Change Permission
 RUN chmod -R 777 /var/www/html/
