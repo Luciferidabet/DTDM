@@ -30,11 +30,14 @@
 <div class="col-sm-12">
 <nav class="navbar navbar-inverse navbar-fixed-top nbar">
     <div class="navbar-header">
-      <a class="navbar-brand lspace" href="index.php">Online Compiler</a>
+      <a class="navbar-brand lspace" href="index.php">RUET OJ</a>
     </div>
     <ul class="nav navbar-nav">
-    <li class="space"><a href="compiler.php"><i class="fa fa-code ispace"></i>Compiler</a></li>
-      <li class="space"><a href="exercise.php"><i class="fa fa-check-square ispace"></i>Exercise</a></li>
+      <li class="space"><a href="compiler.php"><i class="fa fa-code ispace"></i>Compiler</a></li>
+      <li class="space"><a href="archive.php"><i class="fa fa-archive ispace"></i>Problem Archive</a></li>
+      <li class="space"><a href="contest.php"><i class="fa fa-cogs ispace"></i>Contests</a></li>
+      <li class="space"><a href="debug.php"><i class="fa fa-check-square ispace"></i>Debug</a></li>
+     
       
     </ul>
   
@@ -93,9 +96,20 @@
 					include("compilers/cpp.php");
 					break;
 				}
+
+				case "cpp11":
+				{
+					include("compilers/cpp11.php");
+					break;
+				}
 				case "java":
 				{	
 					include("compilers/java.php");
+					break;
+				}
+				case "python2.7":
+				{
+					include("compilers/python27.php");
 					break;
 				}
 				case "python3.2":
@@ -127,8 +141,8 @@
 
 <div class="fm">
 
-<b>Beta Version-2022</b><br>
-<b>Developed By <a href="https://www.facebook.com/nguyensminh.nhut/">Nguyen Minh Nhut</a></b>
+<b>Beta Version-2016</b><br>
+<b>Developed By <a href="https://fb.com/ashadullah.shawon">Ashadullah Shawon</a></b>
 
 </div>
 </div>
